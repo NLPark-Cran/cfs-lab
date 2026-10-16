@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+}
+
+/* 电流流动动画：沿支路的虚线偏移，配合 SVG stroke-dashoffset 使用 */
+@keyframes cfs-current-flow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.cfs-current-flow {
+  animation: cfs-current-flow 1s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
